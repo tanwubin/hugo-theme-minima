@@ -35,7 +35,7 @@ $screens: ("", 0), (sm\:, 640px);
 
     .#{$k}text-left { text-align: left; }
 
-    .#{$k}w-48 { width: 12rem; }
+    .#{$k}w-48 { width: 36rem; } /* 12rem change to 36rem */
 
     .#{$k}w-40 { width: 10rem; }
   }
