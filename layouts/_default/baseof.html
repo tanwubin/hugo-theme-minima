@@ -8,6 +8,14 @@
   {{ block "main" . }} {{ end }}
 
   {{ partial "footer.html" . }}
+
+  <script src="https://cdn.jsdelivr.net/npm/gumshoejs@5.1.2/dist/gumshoe.min.js"></script>
+  <script>
+    var spy = new Gumshoe('#TableOfContents a', {
+        nested: true,
+        nestedClass: 'active'
+      });
+  </script>
 </body>
 
 </html>
