@@ -67,3 +67,98 @@
 
   --back-image: url('texture.png');
 }
+
+/* Both levels of nav */
+#TableOfContents li,
+#TableOfContents ul {
+    list-style-type: none;
+}
+
+#TableOfContents ul {
+    padding-left: 0px;
+}
+
+#TableOfContents li>a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 90%;
+    color: #919eB1;
+}
+
+#TableOfContents li>a:hover,
+#TableOfContents li>a:focus {
+    padding-left: 19px;
+    color: #3A6bA5;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #3A6bA5;
+}
+
+#TableOfContents li.active>a,
+#TableOfContents li.active>a:hover,
+#TableOfContents li.active>a:focus {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #3A6bA5;
+    background-color: transparent;
+    border-left: 2px solid #3A6bA5;
+}
+
+/* Second level */
+#TableOfContents li>ul {
+    padding-bottom: 10px;
+}
+
+#TableOfContents li li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    /* font-size: 12px; */
+    font-weight: normal;
+}
+
+#TableOfContents li li>a:hover,
+#TableOfContents li li>a:focus {
+    padding-left: 29px;
+}
+
+#TableOfContents li li.active>a,
+#TableOfContents li li.active>a:hover,
+#TableOfContents li li.active>a:focus {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+#TableOfContents .nav-link.active+ul {
+    display: block;
+}
+
+.toc-div {
+    position: -webkit-sticky;
+    /* safari 浏览器 */
+    position: sticky;
+    /* 其他浏览器 */
+    top: 20px;
+    float: right;
+    width: calc(50% - 420px);
+    font-size: 12px;
+}
+
+.left-box {
+    // margin-right: 200px;
+    // width: calc(100% - 200px);
+}
+
+/* 移动端样式（小于 768px 的屏幕） */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* 桌面端样式 */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}
