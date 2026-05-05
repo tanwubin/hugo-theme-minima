@@ -142,6 +142,8 @@
     float: right;
     width: calc(50% - 420px);
     font-size: 12px;
+    max-height: calc(100vh - 100px); /* 新增：限制最大高度为视口高度减去边距 */
+    overflow-y: auto; /* 新增：当内容超出时显示滚动条 */
 }
 
 /* 移动端样式（小于 768px 的屏幕） */
@@ -156,4 +158,12 @@
     .mobile-only {
         display: none;
     }
+}
+
+#TableOfContents li > ul {
+    display: none;
+}
+
+#TableOfContents li.active > ul {
+    display: inherit;
 }
